@@ -272,13 +272,6 @@ button{
 
 }
 
-.lambo__text{
-    font-size: 23px;
-    color: #fff;
-    text-align: center;
-    margin-top: 10px;
-}
-
 
 /*Container_3*/
 
@@ -702,6 +695,135 @@ button{
 }
 
 
+@media(max-width: 375px) {
+
+    html{
+        max-width: 375px;
+        width:100%;
+    }
+
+    .header{
+       margin-left: -170px;
+    }
+
+    .intro:after{
+        bottom: -83px;
+    }
+
+    .birger-slide{
+        max-width: 370px;
+        width: 100%;
+    }
+
+    .block{
+       padding: 14px 6px;
+        font-size: 13px;
+        margin: 0px;
+    }
+
+    .container__2{
+        height: 600px;
+        margin: 0px;
+        max-width: 375px;
+        width: 100%;
+    }
+
+    .big_2__title{
+        max-width: 375px;
+        width: 100%;;
+
+    }
+
+    .mini_2__title{
+
+        width: 100%;
+        text-align: center;
+    }
+
+    .sloi{
+        height: 240px;
+        margin: 0px;
+        justify-content: center;
+    }
+    .lamba__1 {
+        margin: 31px 4px;;
+        height: 200px;
+
+    }
+
+    .lamba__imge{
+        width: 116px;
+        height: 130px;
+    }
+
+    .lamba__img{
+        margin-top: 10px;
+        width: 100px;
+        height: 106px;
+    }
+
+    .lambo__title{
+        font-size: 19px;
+    }
+
+    .container__3{
+        margin: 0px;
+    }
+
+    .motor-text{
+        font-size: 18px;
+    }
+
+    .body__img{
+        background-image: linear-gradient(120deg, #4d1d1d, #ff4655, #4d1d1d);
+
+    }
+
+    .testimonials .item img{
+        width: 135px;
+        height: 135px;
+    }
+
+    .testimonials .item {
+        width: 260px;
+    }
+
+
+    .card-moni{
+        font-size: 40px;
+    }
+
+    .container__5{
+        max-width: 360px;
+        width: 100%;
+    }
+
+
+    .final__1{
+        margin-left: 10px;
+        margin: 0;
+        max-width: 360px;
+        width: 95%;
+    }
+
+    .fill__bt{
+        max-width: 360px;
+        font-size: 33px;
+        text-align: center;
+    }
+
+    .final__title{
+        max-width: 360px;
+        font-size: 20px;
+    }
+
+    .fill__tt{
+        text-align: center;
+        max-width: 360px;
+
+    }
+
+}
 
 
 
