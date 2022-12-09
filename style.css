@@ -31,21 +31,18 @@ p {
 /* Container */
 
 .container{
-    max-width: 1920px;
+    z-index: 999;
     margin: 0 166px;
 }
 
 
 /* HEADER */
 
+
 .header{
-    font-family: 'Tinos', serif;
     width: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-
+    z-index: 999;
 }
 
 
@@ -61,8 +58,9 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 0;
-    border-bottom: 1px solid #515369;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+
 }
 
 
@@ -70,18 +68,19 @@ p {
 /* NAV */
 
 .nav__link {
-    font-size: 17px;
-    font-weight: 800;
+    font-family: 'Tinos', serif;
+    font-size: 19px;
     text-transform: uppercase;
     color: #ff4655;
     text-decoration: none;
-    opacity: .75;
+    opacity: .85;
 
-    transform: opacity .3s linear;
+
+    transition: .2s linear;
 }
 
 .nav__link:hover {
-    opacity: 1;
+    color: red;
     }
 
 .nav__link:first-child {
@@ -139,17 +138,20 @@ button{
         background-repeat: no-repeat;
         background-size: cover;
 
+
     }
 
+
 .intro:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 118px;;
-    background: rgba(0,0,0,.7);
-    z-index: 2;
+
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 214px;
+  background: rgba( 0,0,0,0.7 );
+  z-index: 2;
 }
 
 .intro__inner{
@@ -177,9 +179,9 @@ button{
 .intro__pro{
         margin-bottom: 100px;
         font-size: 29px;
-        color:#009999;
+        color:#ff4655;
         line-height: 1.5;
-        margin: 0 10px;
+        padding: 10px 10px;;
         opacity: 1;
          z-index: 3;
         position: relative;
@@ -288,7 +290,7 @@ button{
 .dishers-title{
     font-family: 'Tinos', serif;
     font-weight: 400;
-    font-size: 54px;
+    font-size: 47px;
     text-align: center;
     color:#FFF;
     margin-bottom: 129px;
@@ -488,7 +490,7 @@ button{
 
 .container__5{
   margin: 0 166px;
-  width: 1290px;
+  width: auto;
   height: 750px;
   display: flex;
 }
@@ -511,13 +513,14 @@ button{
     display: flex;
 }
 .ner{
-    margin-top: 5px;
+    margin-top: 10px;
     width: 35px;
     height: 35px;
 }
 
 .nom__1{
-    margin-top: 5px;
+    text-decoration: none;
+    margin-top: 10px;
     margin-left: 10px;
     color:#fff;
     font-size: 30px;
@@ -530,7 +533,6 @@ button{
 }
 
 .karta{
-    padding-left: 200px;
     padding-top: 190px;
 
 }
@@ -542,341 +544,162 @@ button{
 
 /*Adaptiw*/
 
-
-
-@media (max-width: 800px) {
-
-
-
-    .intro__title{
-        font-size: 70px;
+@media(max-width: 1300px) {
+    html{
+        max-width: 1300px;
     }
 
-    .intro__pro{
-        text-align: center;
-        font-size: 23px;
+    .karta{
+        max-width: 750px;
     }
 
-    .img__omax{
-        display: none;
+    .container__5{
+        max-width: 1000px;
+        width: auto;;
     }
 
+    .final__1{
 
     }
 
+    .final__2{
+        max-width: 600px;
+        width: auto;
 
-@media (max-width: 390px){
-
-    .container{
-        max-width: 375px;
      }
 
-    .header{
-        max-width: 100%;
+}
+
+
+@media(max-width: 1080px) {
+
+    html{
+        max-width: 1080px;
     }
 
     .burger{
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: center;
+        opacity: 0;
+    }
 
+    .intro:after{
+        bottom: 196px;
+    }
+
+    .intro__title{
+        font-size: 75px;
+    }
+
+    .intro__pro{
+        font-size:27px;
+    }
+
+    .mini_2__title {
+        font-size: 27px;
+    }
+
+    .container__2{
+        height: 1040px;
+
+    }
+
+    .dishers-title{
+        margin-top: 70px;
+    }
+
+    .img__omax{
+        width: 700px;
+        padding-left: 70px;
+    }
+
+    .motor-text{
+       font-size: 22px;
+    }
+
+    .card-moni{
+        font-size: 47px;
+        margin-bottom: 100px;
+    }
+
+    .testimonials .item{
+        width: 350px;
+    }
+
+    .testimonials .item img{
+        width: 165px;
+        height: 165px;
+    }
+
+    .final__1{
+        justify-content: center;
+        width: 100%;
+        margin-left: 100px;
+    }
+
+    .karta{
+       display: none;
+    }
+
+    .final__2{
+       display: none;
+     }
+
+    .container__5{
+        justify-content: center;
+        margin: 0;
+        max-width: 990px;
+    }
+
+}
+
+
+@media(max-width: 800px) {
+
+    .header__inner{
+        border-bottom: none;
+    }
+
+    .burger{
+        opacity: 1;
+    }
+
+    .burger-slide{
+        display: flex;
+    }
+
+    .block{
+        margin: 7px 15px;
+        font-size: 17px;
     }
 
     .block__1{
         display: none;
     }
 
-    .burger-slide{
-       display: flex;
-    }
-
-
-    .block{
-        text-align: center;
-        margin: 0 10px;
-        padding: 0;
-        font-family: 'Tinos', serif;
-        font-size: 10px;
-
-    }
-
-    .header__inner{
-        margin-right: 250px;
-        margin-left: -160px;
-     }
-
-
-    .intro{
-        max-width: 100%;
-        width:100%;
-        height:350px;
-        margin: 0;
-        min-width: 375px;
-    }
-
-
-    .intro:after{
-        bottom: 315px;
-        width: 100%;
-    }
-
     .intro__title{
-        font-family: 'Tinos', serif;
-        font-size: 30px;
-        width: 380px;
+        font-size: 65px;
     }
 
     .intro__pro{
-        font-family: 'Tinos', serif;
-        font-size: 19px;
-        width: 370px;
-        margin: 0;
-        max-width: 370px;
-        text-align: center;
-
-    }
-
-    .container__2{
-        margin: 0px;
-        max-width: 375px;
-        width: 375px;
-        height: 490px;
-
-    }
-
-    .big_2__title{
-        font-family: 'Tinos', serif;
-        padding-bottom: 10px;
-        width: 390px;
-        font-size: 29px;
-        margin-top: 80px;
-        width: 380px;
-}
-
-    .mini_2__title{
-        font-family: 'Tinos', serif;
-        margin: 0;
-        text-align: center;
-        width: 390px;
-        font-size: 19px;
-        text-align-last: center;
-        max-width: 380px;
-    }
+        font-size: 24px;
+     }
 
     .lamba__1{
-        width: 120px;
-        margin: 0px;
-        height: 140px;
+        margin: 15px 21px;
     }
-
-    .lamba__imge{
-
-       width: 90px;
-       height: 90px;
-       margin-top: 20px;
-       margin-left: 20px;
-       margin-bottom: -10px;
-       border-radius: 10px;
-
-    }
-
-     .lamba__img{
-
-       width: 90%;
-       height: 100px;
-       padding-bottom: 30px;
-       padding-top: -30px;
-      }
-
-    .lambo__title{
-        font-family: 'Tinos', serif;
-        font-size: 16px;
-    }
-
-
-    .sloi{
-        margin-top: 40px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 20px;
-        max-width: 390px;
-        width: 380px;
-        height: 150px;
-
-    }
-
-
-
 
     .container__3{
-        height: 590px;
-
-   }
-
-
-    .dishers-title{
-        width: 190px;
-        max-width: 390px;
-        text-align: center;
-        margin-top:50px;
-        margin-bottom: 10px;
-        padding-right: 50px;
-        font-size: 29px;
-        font-family: 'Tinos', serif;
+        height: 900px;
     }
 
-    .cross{
-        margin-top: 45px;
-    }
-
-    .body__img{
-        height: 300px;
-        background-image: linear-gradient( 90deg, #ff4655,#ff0000, #ff4655);
-    }
-
-    .container__4{
-        width:100%;
-        height:auto;
-    }
-
-
-    .card-moni{
-        font-size: 29px;
-        margin-bottom: 80px;
-    }
-
-    .slider{
-        width: 100%;
-    }
-
-    .testimonials{
-        width: 370px;
-        margin-left: 5px;
-        perspective: 100px;
-        min-height: 250px;
-    }
-
-    .testimonials .item{
-        width: 200px;
-        padding: 20px;
-        height: 150px;
-
-    }
-
-    .testimonials .item {
-        font-size: 16px;
-        font-weight: 300;
-
-    }
-
-    .testimonials .item img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .motor{
-        width: 250px;
-        margin: 22px 0px;
-    }
-
-    .mot{
-        width: 28px;
-        height: 28px;
+    .img__omax{
+         display: none;
     }
 
     .motor-text{
-        margin-left: 10px;
-        font-family: 'Tinos', serif;
-        font-size: 22px;
+        font-size: 41px;
     }
-
-    .motor-text:hover{
-        color:#009999;
-
-    }
-
-    .container__5{
-        display: block;
-        height: 550px;
-        width: 310px;
-        max-width: 310px;
-        margin: 0;
-
-
-    }
-
-    .fill__bt{
-        text-align: center;
-        max-width: 320px;
-        width: 320px;
-        font-size: 29px;
-        margin-bottom: 60px;
-    }
-
-    .final__tt__2{
-       margin-bottom: 15px;
-    }
-
-    .final__title{
-        margin-top: 20px;
-        max-width: 340x;
-        width: 280px;
-      }
-
-    .final__1{
-       margin-top: 50px;
-       margin-left: 20px;
-       width: 100%;
-       max-width: 330px;
-    }
-
-    .ner{
-        margin-bottom: 10px;
-        margin-top: 15px;
-    }
-
-    .nomera{
-        width: 190px;
-    }
-
-    .nom__1{
-        text-decoration: none;
-        margin-top: 23px;
-        width:150px;
-        font-size: 16px;
-    }
-
-   .final__2{
-       display: none;
-       padding: 0;
-       margin-bottom: 15px;
-    }
-
-    .map-widget-business-content-view{
-        width: 150px;
-        height: 50px;
-    }
-
-    .karta{
-        padding-left: 0px;
-        padding-top: 130px;
-        width: 390px;
-    }
-
-    .canvar{
-        width:100%;
-        max-width: 390px;
-        height:auto;
-      }
-
 
 }
-
-
-
-
-
-
 
 
 
